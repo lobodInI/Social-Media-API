@@ -24,6 +24,7 @@ class ManageUserView(generics.RetrieveUpdateAPIView):
 
 class LogoutUserView(APIView):
     """Access token expiry as short as possible"""
+
     authentication_classes = (JWTAuthentication,)
     permission_classes = (IsAuthenticated,)
 
